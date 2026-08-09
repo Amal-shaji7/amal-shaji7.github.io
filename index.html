@@ -22,6 +22,10 @@
             <div class="logo">
                 <span class="prompt">//</span> SECURITY_OPS
             </div>
+            <nav class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+            </nav>
             <div class="system-status">
                 <span class="status-dot"></span>
                 <span class="status-text">SYSTEM_STATUS: SECURE</span>
@@ -35,11 +39,8 @@
             <p class="bio">
                 Cybersecurity professional specializing in operational threat intelligence, rigorous incident triage, and defensive engineering. Bridging incident response execution with systematic risk analysis.
             </p>
-            <<div class="hero-actions">
-                <!-- Links to your main GitHub profile or repositories list -->
+            <div class="hero-actions">
                 <a href="https://github.com/yourusername" target="_blank" class="btn primary">View All Projects</a>
-                
-                <!-- Automatically downloads the resume.pdf file from your repository -->
                 <a href="resume.pdf" download class="btn secondary">Download Résumé</a>
             </div>
         </section>
@@ -185,6 +186,50 @@
             </div>
         </section>
 
+        <!-- 5. About Me & Profiles Section -->
+        <section id="about" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">04 // IDENTITY & PROFILES</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-content-grid">
+                <div class="card bio-card">
+                    <h3>Professional Profile</h3>
+                    <p class="description">
+                        Dedicated cybersecurity professional focused on operational threat intelligence, log analysis, and defensive engineering. I approach security through the lens of systematic risk analysis, bridging high-level threat frameworks with hands-on incident triage and script-based automation.
+                    </p>
+                    <p class="description">
+                        Whether investigating anomalies in network packet captures, hardening architecture against sophisticated attack vectors, or writing custom detection rules, my objective is building resilient environments that withstand modern adversarial techniques.
+                    </p>
+                </div>
+
+                <div class="card links-card">
+                    <h3>Professional Profiles & Contact</h3>
+                    <p class="description">Connect with me or verify my ongoing technical labs and credentials across platforms:</p>
+                    
+                    <div class="profile-links-list">
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="profile-link-item">
+                            <span class="platform-name">LinkedIn</span>
+                            <span class="platform-action">View Profile →</span>
+                        </a>
+                        <a href="https://credly.com/users/yourusername" target="_blank" class="profile-link-item">
+                            <span class="platform-name">Credly (Certifications)</span>
+                            <span class="platform-action">Verify Badges →</span>
+                        </a>
+                        <a href="https://tryhackme.com/p/yourusername" target="_blank" class="profile-link-item">
+                            <span class="platform-name">TryHackMe</span>
+                            <span class="platform-action">View Labs & Rank →</span>
+                        </a>
+                        <a href="mailto:your.email@domain.com" class="profile-link-item highlight-email">
+                            <span class="platform-name">Direct Email</span>
+                            <span class="platform-action">Send Message →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer>
             <p>Designed for Threat Analysis & Incident Response • 2026</p>
@@ -195,7 +240,7 @@
     <script>
         document.addEventListener('mousemove', e => {
             document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
-            document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
+            document.body.style.setProperty('--mouse-y`, ${e.clientY}px`);
         });
     </script>
 </body>
