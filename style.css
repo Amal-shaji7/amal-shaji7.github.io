@@ -442,3 +442,109 @@ footer {
     .hero-actions { flex-direction: column; }
     .container { padding: 20px 16px; }
 }
+
+
+/* Navigation Links across pages */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-blue);
+}
+
+/* About Page Specific Background Treatment */
+.about-page .abstract-grid {
+    background-image: 
+        radial-gradient(circle at 70% 30%, rgba(56, 189, 248, 0.04) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 60px 60px, 60px 60px;
+}
+
+.about-glow {
+    top: 200px;
+    left: 40%;
+    width: 500px;
+    height: 500px;
+    background: rgba(56, 189, 248, 0.04);
+}
+
+/* About Grid Layout */
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+}
+
+.bio-card, .links-card {
+    height: 100%;
+}
+
+.links-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Profile Links List styling */
+.profile-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.profile-link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    padding: 14px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.platform-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.platform-action {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    transition: transform 0.2s ease;
+}
+
+.profile-link-item:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: var(--border-hover);
+    transform: translateX(4px);
+}
+
+.profile-link-item:hover .platform-action {
+    transform: translateX(2px);
+}
+
+.highlight-email {
+    border-color: rgba(56, 189, 248, 0.2);
+    background: rgba(56, 189, 248, 0.03);
+}
+
+@media (max-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
