@@ -1,66 +1,263 @@
 :root {
-    --bg-dark: #0f172a; /* Slate 900 - Very professional corporate dark */
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --border: rgba(255, 255, 255, 0.1);
-    --accent: #38bdf8; /* Sky blue - Modern tech color */
+    --bg-base: #070b14; /* Deep Charcoal-Navy Base */
+    --card-bg: rgba(15, 23, 42, 0.6); /* Translucent Glass */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(56, 189, 248, 0.4);
+    --accent-blue: #38bdf8;
+    --accent-violet: #818cf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: var(--bg-dark);
-    color: #f1f5f9;
+    background-color: var(--bg-base);
+    color: var(--text-main);
     font-family: 'Inter', system-ui, sans-serif;
-    margin: 0;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* Professional Mesh Gradient Background */
-.mesh-bg {
+/* 1. Subtle Cybersecurity Grid Pattern */
+.tech-grid {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-    z-index: -1;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    z-index: 0;
+    pointer-events: none;
+    mask-image: radial-gradient(circle at 50% 20%, black 40%, transparent 80%);
 }
 
-.container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+/* 2. Noise Grain Texture Overlay (Prevents flat gradients) */
+.noise-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    z-index: 1;
+    pointer-events: none;
+}
 
-header { margin-bottom: 80px; }
-.logo { font-weight: 700; color: var(--accent); letter-spacing: 2px; }
+/* 3. Radial Security Glows */
+.radial-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
 
-h1 { font-size: 3rem; margin-bottom: 1rem; color: #fff; }
-.bio { font-size: 1.25rem; color: #94a3b8; max-width: 600px; line-height: 1.5; }
+.hero-glow {
+    top: -50px;
+    left: 20%;
+    width: 450px;
+    height: 450px;
+    background: rgba(56, 189, 248, 0.08); /* Soft blue glow behind hero */
+}
 
-/* The Glass Cards */
+.project-glow {
+    top: 550px;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(129, 140, 248, 0.06); /* Violet glow near project cards */
+}
+
+/* 4. Interactive Cursor Spotlight */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    background: radial-gradient(700px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(56, 189, 248, 0.04), transparent 70%);
+    z-index: 2;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Navbar & Terminal Micro-Label */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.logo {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.prompt {
+    color: var(--accent-blue);
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #10b981; /* Cyan/Green secure indicator */
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.status-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 70px;
+    max-width: 750px;
+}
+
+.badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent-blue);
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+    background: linear-gradient(to right, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bio {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Bento Grid & Glass Cards */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
 }
 
 .card {
     background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 35px;
-    backdrop-filter: blur(12px); /* THIS creates the glass look */
-    transition: all 0.5s ease;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 32px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
 }
 
-/* The Hover Reveal Interaction */
-.card:hover {
-    transform: translateY(-12px);
-    border-color: var(--accent);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-blue);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+    letter-spacing: -0.01em;
 }
 
 .description {
-    color: #94a3b8;
-    margin-top: 15px;
+    color: var(--text-muted);
     font-size: 0.95rem;
-    transition: color 0.3s;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* Hover Illumination / Elevation */
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-hover);
+    background: rgba(15, 23, 42, 0.85);
+    box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15);
 }
 
 .card:hover .description {
-    color: #e2e8f0;
+    color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.4rem; }
+    .container { padding: 20px 16px; }
 }
