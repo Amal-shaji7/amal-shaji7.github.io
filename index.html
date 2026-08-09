@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Operations & Engineering</title>
+    <title>Cybersecurity Operations & Threat Analysis Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -16,7 +16,8 @@
     <div class="radial-glow project-glow"></div>
 
     <main class="container">
-        <!-- Header -->
+        
+        <!-- Header / Navbar -->
         <header class="navbar">
             <div class="logo">
                 <span class="prompt">//</span> SECURITY_OPS
@@ -27,44 +28,161 @@
             </div>
         </header>
 
-        <!-- Hero Section -->
+        <!-- 1. Premium Hero Section -->
         <section class="hero">
             <div class="badge">DEFENSIVE ENGINEERING & THREAT INTELLIGENCE</div>
-            <h1>Securing Modern Architecture.</h1>
+            <h1>Securing Modern Infrastructure & Threat Vectors.</h1>
             <p class="bio">
-                Operational threat intelligence, rigorous incident triage, and defensive engineering. 
-                Documenting methodology, security pipelines, and analytical outcomes across the infrastructure lifecycle.
+                Cybersecurity professional specializing in operational threat intelligence, rigorous incident triage, and defensive engineering. Bridging incident response execution with systematic risk analysis.
             </p>
+            <<div class="hero-actions">
+                <!-- Links to your main GitHub profile or repositories list -->
+                <a href="https://github.com/yourusername" target="_blank" class="btn primary">View All Projects</a>
+                
+                <!-- Automatically downloads the resume.pdf file from your repository -->
+                <a href="resume.pdf" download class="btn secondary">Download Résumé</a>
+            </div>
         </section>
 
-        <!-- Bento Grid Projects Section -->
-        <section id="projects" class="bento-grid">
+        <!-- 2. Featured Projects Case-Study Cards -->
+        <section id="projects" class="section-block">
+            <div class="section-header">
+                <span class="section-tag">01 // PORTFOLIO</span>
+                <h2>Featured Security Labs</h2>
+            </div>
             
-            <div class="card">
-                <div class="card-top">
-                    <span class="card-tag">PYTHON / ML</span>
-                    <span class="card-id">LAB_01</span>
+            <div class="bento-grid">
+                
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-domain">Threat Detection & ML</span>
+                        <span class="card-id">LAB_01</span>
+                    </div>
+                    <h3>Advanced Intrusion Detection System</h3>
+                    <p class="tools-used"><strong>Tools:</strong> Python, XGBoost, CICIDS2017, Scikit-Learn</p>
+                    <p class="description">
+                        Engineered machine learning ensemble models on enterprise network traffic datasets, achieving 99% precision in detecting anomalous behavior and zero-day packet signatures.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/yourusername/advanced-ids" target="_blank" class="link-item">GitHub Repository →</a>
+                        <a href="#" class="link-item secondary-link">Full Report</a>
+                    </div>
                 </div>
-                <h3>Advanced Intrusion Detection</h3>
-                <p class="description">
-                    Engineered machine learning anomaly detection models on enterprise network traffic datasets, achieving high precision in zero-day vector isolation.
-                </p>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-domain">Threat Modeling & Risk</span>
+                        <span class="card-id">LAB_02</span>
+                    </div>
+                    <h3>PASTA Framework Security Audit</h3>
+                    <p class="tools-used"><strong>Tools:</strong> PASTA, NIST CSF, OWASP Top 10</p>
+                    <p class="description">
+                        Executed a structured 7-stage risk quantization mapping against modern mobile payment architecture, directly linking technical vulnerabilities to business impact.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/yourusername/threat-modeling" target="_blank" class="link-item">View Documentation →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-domain">Network Forensics</span>
+                        <span class="card-id">LAB_03</span>
+                    </div>
+                    <h3>Traffic Analysis & Incident Triage</h3>
+                    <p class="tools-used"><strong>Tools:</strong> Wireshark, tcpdump, Snort</p>
+                    <p class="description">
+                        Conducted deep-packet inspection on live simulated packet captures to isolate persistent malicious DNS tunnels, exposed credentials, and data exfiltration patterns.
+                    </p>
+                    <div class="card-links">
+                        <a href="https://github.com/yourusername/network-forensics" target="_blank" class="link-item">GitHub Repository →</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. Certifications and Credentials Section -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-tag">02 // VALIDATION</span>
+                <h2>Certifications & Credentials</h2>
             </div>
 
-            <div class="card">
-                <h3>Threat Modeling (PASTA)</h3>
-                <p class="description">
-                    Executed structured 7-stage risk quantization mapping against modern web applications, aligning technical vulnerabilities directly with business impact.
-                </p>
+            <div class="certs-grid">
+                
+                <div class="cert-card">
+                    <div class="cert-meta">
+                        <span class="cert-issuer">CompTIA</span>
+                        <span class="cert-date">Issued: 2025 • Active</span>
+                    </div>
+                    <h3>CompTIA Security+</h3>
+                    <p class="cert-validation">
+                        Validated foundational baseline skills required to perform core security functions, secure enterprise networks, and manage operational risk management.
+                    </p>
+                    <a href="#" target="_blank" class="verify-link">Verify Credential (ID: COMP001029...) →</a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-meta">
+                        <span class="cert-issuer">Target Issuer</span>
+                        <span class="cert-date">In Progress / 2026</span>
+                    </div>
+                    <h3>Advanced SOC Analyst Track</h3>
+                    <p class="cert-validation">
+                        Demonstrates competency in continuous SIEM event monitoring, behavioral log parsing, forensic artifact handling, and structured incident containment.
+                    </p>
+                    <span class="verify-link pending">Credential Pending Target Date</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Skills and Technology Matrix -->
+        <section class="section-block">
+            <div class="section-header">
+                <span class="section-tag">03 // CAPABILITIES</span>
+                <h2>Technology Matrix</h2>
             </div>
 
-            <div class="card">
-                <h3>Network Forensics</h3>
-                <p class="description">
-                    Deep-packet inspection and live traffic captures to isolate anomalous DNS tunnels, exfiltration channels, and persistent threat indicators.
-                </p>
-            </div>
+            <div class="matrix-grid">
+                
+                <div class="matrix-box">
+                    <h4>Security Operations</h4>
+                    <p>SIEM deployment, alert triage, log analysis, incident response frameworks, EDR telemetry.</p>
+                </div>
 
+                <div class="matrix-box">
+                    <h4>Network Security</h4>
+                    <p>Wireshark, Nmap, firewall configurations, IDS/IPS tuning, packet capture analysis.</p>
+                </div>
+
+                <div class="matrix-box">
+                    <h4>Application Security</h4>
+                    <p>Burp Suite, OWASP Top 10 mitigation, REST API vulnerability testing, secure coding audits.</p>
+                </div>
+
+                <div class="matrix-box">
+                    <h4>Cloud Security</h4>
+                    <p>AWS IAM policy design, Azure configurations, security groups, cloud storage auditing.</p>
+                </div>
+
+                <div class="matrix-box">
+                    <h4>Programming & Scripting</h4>
+                    <p>Python automation scripting, Bash automation, PowerShell parsing, SQL data queries.</p>
+                </div>
+
+                <div class="matrix-box">
+                    <h4>Platforms & Environments</h4>
+                    <p>Linux (Ubuntu/RHEL) systems administration, Windows Server hardening, Active Directory.</p>
+                </div>
+
+                <div class="matrix-box full-width">
+                    <h4>Frameworks & Taxonomies</h4>
+                    <p>MITRE ATT&CK matrix mapping, NIST Cybersecurity Framework (CSF), Cyber Kill Chain methodology.</p>
+                </div>
+
+            </div>
         </section>
 
         <!-- Footer -->
@@ -77,7 +195,7 @@
     <script>
         document.addEventListener('mousemove', e => {
             document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
-            document.body.style.setProperty('--mouse-y`, ${e.clientY}px`);
+            document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
         });
     </script>
 </body>
