@@ -3,38 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Portfolio</title>
+    <title>Security Operations & Engineering</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Professional font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mesh-bg"></div> <!-- The professional theme layer -->
+
+    <!-- Ambient Background Layers -->
+    <div class="tech-grid"></div>
+    <div class="noise-overlay"></div>
+    <div class="radial-glow hero-glow"></div>
+    <div class="radial-glow project-glow"></div>
 
     <main class="container">
-        <header>
-            <div class="logo">// SECURITY_PORTFOLIO</div>
+        <!-- Header -->
+        <header class="navbar">
+            <div class="logo">
+                <span class="prompt">//</span> SECURITY_OPS
+            </div>
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span class="status-text">SYSTEM_STATUS: SECURE</span>
+            </div>
         </header>
 
+        <!-- Hero Section -->
         <section class="hero">
-            <h1>Cybersecurity Operations</h1>
-            <p class="bio">Operational threat intelligence, incident analysis, and defensive engineering. Documenting methodology and technical outcomes.</p>
+            <div class="badge">DEFENSIVE ENGINEERING & THREAT INTELLIGENCE</div>
+            <h1>Securing Modern Architecture.</h1>
+            <p class="bio">
+                Operational threat intelligence, rigorous incident triage, and defensive engineering. 
+                Documenting methodology, security pipelines, and analytical outcomes across the infrastructure lifecycle.
+            </p>
         </section>
 
+        <!-- Bento Grid Projects Section -->
         <section id="projects" class="bento-grid">
+            
             <div class="card">
-                <h3>Advanced IDS</h3>
-                <p class="description">Engineered ML-based anomaly detection achieving 99% precision on network traffic.</p>
+                <div class="card-top">
+                    <span class="card-tag">PYTHON / ML</span>
+                    <span class="card-id">LAB_01</span>
+                </div>
+                <h3>Advanced Intrusion Detection</h3>
+                <p class="description">
+                    Engineered machine learning anomaly detection models on enterprise network traffic datasets, achieving high precision in zero-day vector isolation.
+                </p>
             </div>
+
             <div class="card">
-                <h3>Threat Modeling</h3>
-                <p class="description">Quantifying enterprise risk using the PASTA framework and NIST CSF guidelines.</p>
+                <h3>Threat Modeling (PASTA)</h3>
+                <p class="description">
+                    Executed structured 7-stage risk quantization mapping against modern web applications, aligning technical vulnerabilities directly with business impact.
+                </p>
             </div>
+
             <div class="card">
                 <h3>Network Forensics</h3>
-                <p class="description">Deep-packet inspection and incident triage for identifying malicious actor IoCs.</p>
+                <p class="description">
+                    Deep-packet inspection and live traffic captures to isolate anomalous DNS tunnels, exfiltration channels, and persistent threat indicators.
+                </p>
             </div>
+
         </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Designed for Threat Analysis & Incident Response • 2026</p>
+        </footer>
     </main>
+
+    <!-- Cursor Spotlight Script -->
+    <script>
+        document.addEventListener('mousemove', e => {
+            document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
+            document.body.style.setProperty('--mouse-y`, ${e.clientY}px`);
+        });
+    </script>
 </body>
 </html>
