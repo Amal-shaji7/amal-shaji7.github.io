@@ -579,3 +579,21 @@ footer {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
 }
+
+/* Human Narrative Section Layout */
+.about-narrative-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.narrative-card {
+    height: 100%;
+}
+
+.narrative-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
