@@ -597,3 +597,30 @@ footer {
     color: #fff;
     margin-bottom: 12px;
 }
+
+/* Ensure the About section container allows grid flow */
+#about {
+    width: 100%;
+}
+
+/* Bento Grid Layout: Left column (Why Cyber) | Right column (Stacked) */
+.about-bento-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Right side stack container */
+.about-stack-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Responsive fallback only for actual mobile screens */
+@media (max-width: 850px) {
+    .about-bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
